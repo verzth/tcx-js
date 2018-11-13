@@ -1,5 +1,5 @@
 {
-  "name": "tcx-js",
+  "name": "verzth-tcx-js",
   "version": "0.0.1",
   "description": "TCX Client JS Library",
   "main": "tcx.js",
