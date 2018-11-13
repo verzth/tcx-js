@@ -163,5 +163,5 @@
     TCX.prototype.appendTime = function (params) {
         params['tcx_datetime'] = this.getTime();
         return params;
-    }
-})(jQuery,CryptoJS);
+    };
+}(jQuery, CryptoJS));
