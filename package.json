@@ -1,6 +1,6 @@
 {
   "name": "verzth-tcx-js",
-  "version": "0.0.3",
+  "version": "0.0.3-a",
   "description": "TCX Client JS Library",
   "main": "tcx.js",
   "scripts": {
