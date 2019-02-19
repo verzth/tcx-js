@@ -11,10 +11,10 @@
     }
 
     function random(){
-        let text = '';
-        const possible = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        var text = '';
+        var possible = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
-        for (let i = 0; i < 16; i++) {
+        for (var i = 0; i < 16; i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         }
 
