@@ -39,7 +39,7 @@
     }
     function setCookie(cookie) {
         var date = new Date();
-        date.setFullYear(date.getFullYear()+3);
+        date.setHours(date.getHours()+2);
         document.cookie = $_COOKIE_NAME+"="+crypt.AES.encrypt(JSON.stringify(cookie),crypt.enc.Base64.stringify(crypt.enc.Utf8.parse("tcx-js")))+";expires="+date.toGMTString()+";path=/";
     }
     
