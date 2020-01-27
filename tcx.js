@@ -46,10 +46,10 @@
     this.TCX = function () {
         var defaults = {
             url : '',
+            auth : 'param',
             app_id : '',
             secret_key : '',
             public_key : '',
-            auth : 'param',
             master_key : ''
         };
         
@@ -75,7 +75,8 @@
                 paramText.replace(/^&+|&+$/g, '');
             }break;
             case 'time':{
-                paramText+=params.tcx_datetime;
+                if(params !== undefined && params.hasOwnProperty("tcx_datetime")) paramText=params.tcx_datetime;
+                else paramText = this.getTime();
             }break;
         }
         var auth = crypt.enc.Hex.stringify(crypt.SHA1(paramText+this.options.public_key+clientKey));

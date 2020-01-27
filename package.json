@@ -1,10 +1,12 @@
 {
-  "name": "verzth-tcx-js",
-  "version": "0.0.6",
+  "name": "@verzth/tcx-js",
+  "version": "1.0.0",
   "description": "TCX Client JS Library",
   "main": "tcx.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm-run-all build:*",
+    "build:js": "uglifyjs tcx.js -c -m -e -o tcx.min.js",
+    "build:bundle": "uglifyjs tcx.js node_modules/crypto-js/crypto-js.js node_modules/moment/min/moment-with-locales.js -c -m -e -o tcx.bundle.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,9 @@
     "crypto-js": "^3.1.9-1",
     "jquery": "^3.3.1",
     "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "uglify-js": "^3.7.6"
   }
 }

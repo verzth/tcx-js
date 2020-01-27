@@ -9,15 +9,17 @@ Javascript Library for [TCX Authentication Module](https://github.com/verzth/tcx
 ### Installation
 NPM
 ```
-npm i verzth-tcx-js
+npm i @verzth/tcx-js
 ```
 or
 ```
-npm i --save verzth-tcx-js
+npm i --save @verzth/tcx-js
 ```
 
 ### How to Use:
-1. Add script in your html.
+1. Add script in your html, use tcx.min.js for minified version, or you can use tcx.bundle.js for minified version
+   which was included cryptojs and moment, all our bundle (By verzth) doesn't include jquery, so you need to add your own script
+   (Because jquery frequently used by developers).
    ```
    <script src="{file_path}/tcx.js"></script>
    ```
