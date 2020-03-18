@@ -59,6 +59,14 @@
             this.options = extendDefaults(defaults,{});
         }
     };
+
+    TCX.prototype.AUTH_DEFAULT = "none";
+    TCX.prototype.AUTH_PARAM = "param";
+    TCX.prototype.AUTH_TIME = "time";
+
+    TCX.prototype.getAuth = function () {
+        return this.options.auth;
+    };
     
     TCX.prototype.getAppID = function () {
         return this.options.app_id;
